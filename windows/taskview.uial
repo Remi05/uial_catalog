@@ -4,7 +4,7 @@ context TaskView [ClassName="Windows.UI.Core.CoreWindow", ControlType="Window", 
     context NewDesktopButton [AutomationId="NewVirtualDesktopBarButton", ClassName="Button", ControlType="Button", Name="New desktop"]:
     context RunningApps($windowName) [ClassName="ListViewItem", ControlType="ListItem", Name=$windowName]:
 
-    interaction CreateNewDesktop():
+    interaction CreateNewDesktop:
         NewDesktopButton::Invoke()
 
     interaction SwitchDesktop($desktopName):
