@@ -20,5 +20,5 @@ context Taskbar [ClassName="Shell_TrayWnd"]:
     interaction OpenTaskView:
         TaskViewButton::Invoke()
 
-    interaction ShowDesktop():
+    interaction ShowDesktop:
         ShowDesktopButton::Invoke()
