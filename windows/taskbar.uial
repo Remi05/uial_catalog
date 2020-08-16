@@ -1,0 +1,24 @@
+
+context Taskbar [ClassName="Shell_TrayWnd"]:
+    context CortanaButton      [ControlType="Button", Name="Talk to Cortana"]:
+    context ShowDesktopButton  [ControlType="Button", Name="Show desktop"]:
+    context StartButton        [ControlType="Button", Name="Start"]:
+    context TaskViewButton     [ControlType="Button", Name="Task View"]:
+
+    context RunningApplications [ControlType="ToolBar", Name="Running applications"]:
+        context AppIcon($iconName) [ControlType="Button", Name=$iconName]:
+
+    interaction LaunchApp($appName):
+        RunningApplications::AppIcon($appName)::Invoke()
+
+    interaction OpenCortana:
+        CortanaButton::Invoke()
+
+    interaction OpenStart:
+        StartButton::Invoke()
+
+    interaction OpenTaskView:
+        TaskViewButton::Invoke()
+
+    interaction ShowDesktop():
+        ShowDesktopButton::Invoke()
