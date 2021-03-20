@@ -1,0 +1,66 @@
+context Settings::System:
+    context SettingItem($settingName) [ClassName="ListViewItem", ControlType="ListItem", Name=$settingName]:
+
+    context Display:
+        context BrightnessSlider              [AutomationId="SystemSettings_Display_Brightness_Slider", ClassName="Slider", ControlType="Slider"]:
+        context NightLightToggle              [AutomationId="SystemSettings_Display_BlueLight_AutomaticOnScheduleWithTime_ToggleSwitch", ClassName="ToggleSwitch", ControlType="Button"]:
+        context NightLightSettingsButton      [AutomationId="SystemSettings_Display_BlueLightSettings_HyperlinkButton", ClassName="Hyperlink", ControlType="Hyperlink"]:
+        context AdvancedColorSettingsButton   [AutomationId="SystemSettings_Display_AdvancedColorSettings_HyperlinkButton", ClassName="Hyperlink", ControlType="Hyperlink"]:
+        context AdvancedScalingSettingsButton [AutomationId="SystemSettings_Display_AdvancedScalingSettings_HyperlinkButton", ClassName="Hyperlink", ControlType="Hyperlink"]:
+        context ResolutionComboBox            [AutomationId="SystemSettings_Display_Resolution_ComboBox", ClassName="ComboBox", ControlType="ComboBox"]:
+        context OrientationComboBox           [AutomationId="SystemSettings_Display_Orientation_ComboBox", ClassName="ComboBox", ControlType="ComboBox"]:
+        context ScalingComboBox               [AutomationId="SystemSettings_Display_Scaling_ItemSizeOverride_ComboBox", ClassName="ComboBox", ControlType="ComboBox"]:
+        context ConnectWirelessDisplayButton  [AutomationId="SystemSettings_Display_ConnectWireless_HyperlinkButton", ClassName="Hyperlink", ControlType="Hyperlink"]:
+        context DetectDisplayButton           [AutomationId="SystemSettings_Display_Detect_Button", ClassName="Button", ControlType="Button"]:
+        context AdvancedDisplaySettingsButton [AutomationId="SystemSettings_Display_AdvancedDisplaySettings_HyperlinkButton", ClassName="Hyperlink", ControlType="Hyperlink"]:
+        context GraphicsSettingsButton        [AutomationId="SettingsPageGpuPreferenceView_HyperlinkButton", ClassName="Hyperlink", ControlType="Hyperlink"]:
+
+        context AdvancedColorSettings:
+        context AdvancedScalingSettings:
+        context AdvancedDisplaySettings:
+        context GraphicsSettings:
+
+    context Sound:
+
+    context Notifications:
+
+    context FocusAssist:
+
+    context Power:
+        context DisplayOffBatteryTimeoutComboBox   [AutomationId="SystemSettings_PowerAndSleep_DisplayOffTimeoutDC_ComboBox", ClassName="ComboBox", ControlType="ComboBox"]:
+        context DisplayOffPluggedInTimeoutComboBox [AutomationId="SystemSettings_PowerAndSleep_DisplayOffTimeoutAC_ComboBox", ClassName="ComboBox", ControlType="ComboBox"]:
+        context SleepBatteryTimeoutComboBox        [AutomationId="SystemSettings_PowerAndSleep_SleepTimeoutDC_ComboBox", ClassName="ComboBox", ControlType="ComboBox"]:
+        context SleepPluggedInTimeoutComboBox      [AutomationId="SystemSettings_PowerAndSleep_SleepTimeoutAC_ComboBox", ClassName="ComboBox", ControlType="ComboBox"]:
+
+    context BatterySaver:
+        context OverrideToggle             [AutomationId="SystemSettings_BatterySaver_LandingPage_OverrideControl_ToggleSwitch", ClassName="ToggleSwitch", ControlType="Button"]:
+        context ThresholdComboBox          [AutomationId="SystemSettings_BatterySaver_SettingsPage_ThresholdValue_ComboBox", ClassName="ComboBox", ControlType="ComboBox"]:
+        context BrightnessDimmingCheckBox  [AutomationId="SystemSettings_BatterySaver_SettingsPage_BrightnessDimmingEnabled_CheckBox", ClassName="CheckBox", ControlType="CheckBox"]:
+        context BatteryUsageperAppComboBox [AutomationId="SystemSettings_BatterySaver_UsagePage_DataDuration_ComboBox", ClassName="ComboBox", ControlType="ComboBox"]:
+
+    context Storage:
+
+    context Tablet:
+        context PreferenceComboBox             [AutomationId="SystemSettings_ShellMode_Preference_ComboBox", ClassName="ComboBox", ControlType="ComboBox"]:
+        context ModeChangeConfigComboBox       [AutomationId="SystemSettings_ShellMode_ModeChangeConfig_ComboBox", ClassName="ComboBox", ControlType="ComboBox"]:
+        context AdditionalTabletSettingsButton [AutomationId="SystemSettings_ShellMode_TouchImprovementAdvanced_HyperlinkButton", ClassName="Hyperlink", ControlType="Hyperlink"]:
+
+    context Multitasking:
+
+    context Projecting:
+
+    context SharedExperiences:
+
+    context Clipboard:
+        context HistoryToggle          [AutomationId="SystemSettings_Clipboard_IsSaveClipboardItemsEnabled_ToggleSwitch", ClassName="ToggleSwitch", ControlType="Button"]:
+        context DeviceSyncToggle       [AutomationId="SystemSettings_Clipboard_IsShareClipboardItemsEnabled_ToggleSwitch", ClassName="ToggleSwitch", ControlType="Button"]:
+        context PrivacyStatementButton [AutomationId="SystemSettings_Clipboard_PrivacyStatement_HyperlinkButton", ClassName="Hyperlink", ControlType="Hyperlink"]:
+        context ClearButton            [AutomationId="SystemSettings_Clipboard_ClearClipboardItems_Button", ClassName="Button", ControlType="Button"]:
+
+    context RemoteDesktop:
+        context EnableButton      [AutomationId="SystemSettings_RemoteDesktop_ToggleRemoteDesktop_ToggleSwitch", ClassName="ToggleSwitch", ControlType="Button"]:
+        context SelectUsersButton [AutomationId="SystemSettings_RemoteDesktop_UsersLink_HyperlinkButton", ClassName="Hyperlink", ControlType="Hyperlink"]:
+
+    context About:
+
+

@@ -1,0 +1,18 @@
+
+context StartMenu [ClassName="Windows.UI.Core.CoreWindow", ControlType="Window", Name="Start"]:
+    context Tile($tileName) [Name=$tileName]:
+    context AllAppsButton [ControlType="ListItem", Name="All Apps"]:
+    context AppEntry($appName) [ControlType="ListItem", Name=$appName]:
+    context AccountButton [ControlType="ListItem", Name="User account*"]:
+    context SettingsButton [ControlType="ListItem", Name="Settings"]:
+    context PowerButton [AutomationId="PowerButton"]:
+
+    interaction LaunchApp($appName):
+        AllAppsButton::Invoke()
+        AppEntry($appName)::Invoke()
+
+    interaction LaunchPinnedApp($appName):
+        Tile($appName)::Invoke()
+
+    interaction OpenSettings:
+        SettingsButton::Select()

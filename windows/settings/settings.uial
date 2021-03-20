@@ -1,0 +1,4 @@
+context Settings:
+    context HomePage:
+        context SettingItem($settingName) [ClassName="GridViewItem", ControlType="ListItem", Name=$settingName]:
+
