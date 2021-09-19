@@ -1,0 +1,98 @@
+
+context QuickSettings [ControlType="Window", Name="Control Center"]:
+    context VolumeSlider [ControlType="Slider", Name="Volume"]:
+    context BrightnessSlider [ControlType="Slider", Name="Brightness"]:
+
+    context MuteButton [ControlType="Button", AutomationId="Microsoft.QuickAction.Volume"]:
+    context ManageAudioDevicesButton [ControlType="Button", Name="Manage audio devices"]:
+
+    context BatteryButton [ControlType="Button", AutomationId="Microsoft.QuickAction.Battery"]:
+    context EditButton [ControlType="Button", AutomationId="Microsoft.QuickAction.Edit"]:
+    context AllSettingsButton [ControlType="Button", AutomationId="Microsoft.QuickAction.AllSettings"]:
+    
+    context AccessibilityButton [ControlType="Button", AutomationId="Microsoft.QuickAction.Accessibility"]:
+    context AirplaneModeButton [ControlType="Button", AutomationId="Microsoft.QuickAction.AirplaneMode"]:
+    context BatterySaverButton [ControlType="Button", AutomationId="Microsoft.QuickAction.BatterySaver"]:
+    context BluetoothButton [ControlType="Button", AutomationId="Microsoft.QuickAction.Bluetooth"]: 
+    context Castbutton [ControlType="Button", AutomationId="Microsoft.QuickAction.Cast"]:
+    context FocusAssistButton [ControlType="Button", AutomationId="Microsoft.QuickAction.QuietHours"]:
+    context KeyboardLayoutButton [ControlType="Button", AutomationId="Microsoft.QuickAction.InputSwitcher"]:
+    context MobileHotspotButton [ControlType="Button", AutomationId="Microsoft.QuickAction.MobileHotspot"]:
+    context NearbySharingButton [ControlType="Button", AutomationId="Microsoft.QuickAction.NearShare"]:
+    context NightLightContext [ControlType="Button", AutomationId="Microsoft.QuickAction.BlueLightReduction"]:
+    context ProjectButton [ControlType="Button", AutomationId="Microsoft.QuickAction.Project"]:
+    context RotationLockButton [ControlType="Button", AutomationId="Microsoft.QuickAction.RotationLock"]:
+    context VpnButton [ControlType="Button", AutomationId="Microsoft.QuickAction.Vpn"]:
+    context WifiButton [ControlType="Button", AutomationId="Microsoft.QuickAction.WiFi"]:
+    context ManageWifiConnectionsButton [ControlType="Button", Name="Manage Wi-Fi connections"]:
+
+    context AccessibilityPage [ControlType="Window", Name="Accessibility", AutomationId="PageWindow"]:
+        context BackButton [ControlType="Button", AutomationId="BackButton"]:
+        context MoreAccessibilitySettingsButton [ControlType="Button", Name="More Accessibility settings"]:
+        context ToggleColorFiltersButton [ControlType="Button", Name="Color filters"]:
+        context ToggleMagnifierButton [ControlType="Button", Name="Magnifier"]:
+        context ToggleMonoAudioButton [ControlType="Button", Name="Mono audio"]:
+        context ToggleNarratorButton [ControlType="Button", Name="Narrator"]:
+        context ToggleStickyKeysButton [ControlType="Button", Name="Sticky keys"]:
+
+    context AudioDevicesPage [ControlType="Window", Name="Volume", AutomationId="PageWindow"]:
+        context BackButton [ControlType="Button", AutomationId="BackButton"]:
+        context MoreVolumeSettingsButton [ControlType="Button", Name="More volume settings"]:
+        context AudioDevicesList [ControlType="List"]:
+            context AudioDevice($audioDeviceName) [ControlType="ListItem", Name=$audioDeviceName]:
+
+    context CastPage [ControlType="Window", AutomationId="DevicesFlowFrameRepaint"] {AutomationId="PageTitle", Name="Cast"}:
+        context BackButton [ControlType="Button", AutomationId="BackHeaderButton"]:
+        context FindOtherDevicesButton [ControlType="Button", Name="Find other devices"]:
+        context DevicesList [ControlType="List", AutomationId="ListViewDevices"]:
+            context Device($deviceName) [ControlType="ListItem", Name=$deviceName]:
+
+    context KeyboardLayoutPage [ControlType="Window", Name="Keyboard layout", AutomationId="PageWindow"]:
+        context BackButton [ControlType="Button", Name="Back", AutomationId="BackButton"]:
+        context MoreKeyboardSettingsButton [ControlType="Button", Name="More keyboard settings"]:
+        context KeyboardLayoutsList [ControlType="List", AutomationId="InputSwitcherListView"]:
+            context KeyboardLayout($keyboardLayoutName) [ControlType="ListItem", Name=$keyboardLayoutName]:
+
+    context ProjectPage [ControlType="Window", AutomationId="DevicesFlowFrameRepaint"] {AutomationId="PageTitle", Name="Project"}:
+        context BackButton [ControlType="Button", AutomationId="BackHeaderButton"]:
+        context MoreDisplaySettingsButton [ControlType="Button", Name="More Display settings"]:
+        context DisplayOptionsList [ControlType="List", AutomationId="ListViewDisplaySwitch"]:
+            context Duplicate [ControlType="ListItem", Name="Duplicate"]:
+            context Extend [ControlType="ListItem", Name="Extend"]:
+            context PcScreenOnly [ControlType="ListItem", Name="PC screen only"]:
+            context SecondScreenOnly [ControlType="ListItem", Name="Second screen only"]:
+
+    context VpnPage [ControlType="Window", Name="VPN", AutomationId="PageWindow"]:
+        context BackButton [ControlType="Button", AutomationId="BackButton"]:
+        context MoreVpnSettingsButton [ControlType="Button", Name="More VPN settings"]:
+        context VpnsList [ControlType="List", AutomationId="SystemSettings_Vpn_Connections_Flyout_ListView"]:
+            context Vpn($vpnName) [ControlType="ListItem"] {AutomationId="SystemSettings_Connections_VPN_Collection_TitleTextBlock", Name=$vpnName}:
+            context ConnectedVpn [ControlType="ListItem"] {AutomationId="SystemSettings_Connections_VPN_Collection_DescriptionTextBlock", Name="Connected"}:
+
+    context WifiPage [ControlType="Window", Name="Wi-Fi", AutomationId="PageWindow"]:
+        context BackButton [ControlType="Button", AutomationId="BackButton"]:
+        context MoreWifiSettingsButton [ControlType="Button", Name="More Wi-Fi settings"]:
+        context ToggleWifiButton [ControlType="Button", AutomationId="Microsoft.QuickAction.WiFi"]:
+        context WifiNetworksList [ControlType="List", AutomationId="SystemSettings_Connections_Adapter_Wi-Fi_Wi-Fi_ListView"]:
+            context WifiNetwork($networkName) [ControlType="ListItem"] {Name=$networkName}:
+            context ConnectedNetwork [ControlType="ListItem"] {ControlType="Button", AutomationId="DisconnectButton"}:
+                context DisconnectButton [ControlType="Button", AutomationId="DisconnectButton"]:
+                context PropertiesButton [ControlType="Hyperlink", AutomationId="WiFiConnectedNetworkPropertiesButton"]:
+
+    context EditQuickSettingsPage {AutomationId="DoneButton"}:
+        context AddButton [ControlType="Button", AutomationId="AddButton"]:
+        context DoneButton [ControlType="Button", AutomationId="DoneButton"]:
+
+        context AccessibilityUnpinButton [ControlType="Button", Name="Accessibility Unpin", AutomationId="UnpinButton"]:
+        context AirplaneModeUnpinButton [ControlType="Button", Name="Airplane mode Unpin", AutomationId="UnpinButton"]:
+        context BatterySaverUnpinButton [ControlType="Button", Name="Battery saver Unpin", AutomationId="UnpinButton"]:
+        context BluetoothUnpinButton [ControlType="Button", Name="Bluetooth Unpin", AutomationId="UnpinButton"]:
+        context CastUnpinButton [ControlType="Button", Name="Cast Unpin", AutomationId="UnpinButton"]:
+        context FocusAssistUnpinButton [ControlType="Button", Name="Focus assist Unpin", AutomationId="UnpinButton"]:
+        context KeyboardLayoutUnpinButton [ControlType="Button", Name="Keyboard layout Unpin", AutomationId="UnpinButton"]:
+        context MobileHotspotUnpinButton [ControlType="Button", Name="Mobile hotspot Unpin", AutomationId="UnpinButton"]:
+        context NearbySharingUnpinButton [ControlType="Button", Name="Nearby sharing Unpin", AutomationId="UnpinButton"]:
+        context NightLightUnpinButton [ControlType="Button", Name="Night light Unpin", AutomationId="UnpinButton"]:
+        context ProjectUnpinButton [ControlType="Button", Name="Project Unpin", AutomationId="UnpinButton"]:
+        context VpnUnpinButton [ControlType="Button", Name="VPN Unpin", AutomationId="UnpinButton"]:
+        context WifiUnpinButton [ControlType="Button", Name="Wi-Fi Unpin", AutomationId="UnpinButton"]:
