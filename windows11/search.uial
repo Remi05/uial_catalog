@@ -1,0 +1,56 @@
+
+context Search:
+    context SearchBar [ControlType="Edit", AutomationId="SearchTextBox"]:
+
+    context GiveFeedbackButton [ControlType="Button", AutomationId="feedbackButton"]:
+    context OptionsButton [ControlType="Button", AutomationId="optionsButton"]:
+
+    context SendFeedbackMenu:
+        context SendButton [ControlType="Button", Name="Send"]:
+        context CancelButton [ControlType="Button", Name="Cancel"]:
+        context LearnMoreHyperlink [ControlType="Hyperlink", Name="Learn more"]:
+        context PrivacyStatementHyperlink [ControlType="Hyperlink", Name="Privacy Statement"]:
+        context ReportConcernHyperlink [ControlType="Hyperlink", Name="Report a concern"]:
+
+    context OptionsMenu [ControlType="List", Name="Menu"]:
+        context ManageAccounts [ControlType="ListItem", Name="Manage accounts", AutomationId="advancedOption2"]:
+        context AddAMicrosftAccount [ControlType="ListItem", Name="Add a Microsoft account", AutomationId="advancedOption3"]:
+        context SearchSettings [ControlType="ListItem", Name="Search settings", AutomationId="advancedOption4"]:
+        context IndexingOptions [ControlType="ListItem", Name="Indexing options", AutomationId="advancedOption5"]:
+
+    context NavBar [ControlType="Tab", Name="Filter your results"]:
+        context All [ControlType="TabItem", Name="All"]:
+        context Apps [ControlType="TabItem", Name="Apps"]:
+        context Documents [ControlType="TabItem", Name="Documents"]:
+        context Email [ControlType="TabItem", Name="Email"]:
+        context Folders [ControlType="TabItem", Name="Folders"]:
+        context Music [ControlType="TabItem", Name="Music"]:
+        context People [ControlType="TabItem", Name="People"]:
+        context Photos [ControlType="TabItem", Name="Photos"]:
+        context Settings [ControlType="TabItem", Name="Settings"]:
+        context Videos [ControlType="TabItem", Name="Videos"]:
+        context Web [ControlType="TabItem", Name="Web"]:
+        context More [ControlType="Button", AutomationId="moreButton"]:
+
+    context AllPage:
+        context TopAppsList [ControlType="List", Name="Top apps"]:
+            context TopApp($appName) [ControlType="ListItem", $appName]:
+
+        context QuickSearchesList:
+            context QuickSearchesItem($itemName) [ControlType="ListItem", Name=$itemName]:
+
+        context RecentList:
+            context RecentItem($itemName) [ControlType="ListItem", Name=$itemName]:
+
+    context AppsPage:
+        context FrequentAppsSection:
+            context FrequentApp($appName):
+
+    context DocumentsPage:
+    context EmailPage:
+    context MusicPage:
+    context PeoplePage:
+    context PhotosPage:
+    context SettingsPage:
+    context VideosPage:
+    context WebPage:
