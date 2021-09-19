@@ -1,0 +1,44 @@
+
+context StartMenu [ControlType="Window", AutomationId="LauncherFrameXAMLWindow"]:
+    context SearchBar [ControlType="Button", AutomationId="StartMenuSearchBox"]:
+
+    context PowerButton [ControlType="ListItem", AutomationId="PowerButton"]:
+    context UserTileButton [ControlType="ListItem", AutomationId="UserTileButton"]:
+
+    context PowerOptions [ControlType="Window", Name="PopupHost"]:
+    context UserOptions [ControlType="Window", Name="PopupHost"]:
+
+    conyext DocumentsButton [ControlType="ListItem", AutomationId="Microsoft.Windows.Documents"]:
+    context DownloadsButton [ControlType="ListItem", AutomationId="Microsoft.Windows.Downloads"]:
+    context FileExplorerButton [ControlType="ListItem", AutomationId="Microsoft.Windows.Explorer"]:
+    context MusicButton [ControlType="ListItem", AutomationId="Microsoft.Windows.Music"]:
+    context NetworkButton [ControlType="ListItem", AutomationId="Microsoft.Windows.Network"]:
+    context PersonalFolderButton [ControlType="ListItem", AutomationId="Microsoft.Windows.UserProfile"]:
+    context PicturesButton [ControlType="ListItem", AutomationId="Microsoft.Windows.Pictures"]:
+    context SettingsButton [ControlType="ListItem", Name="Settings"]:
+    context VideosButton [ControlType="ListItem", AutomationId="Microsoft.Windows.Videos"]:
+
+    context MainPage:
+        context AllAppsButton [ControlType="Button", AutomationId="ShowAllAppsButton"]:
+        context PinnedAppsList [ControlType="List", AutomationId="PinnedList"]:
+            context PinnedApp($appName) [ControlType="ListItem", Name=$appName]:
+            context PinnedAppContextMenu [ControlType="Window", Name="PopupHost"]:
+
+        context PinnedAppsPagerMenu [ControlType="Menu", AutomationId="PinnedListPipsPager"]:
+            context PreviousPageButton [ControlType="Button", AutomationId="PreviousPageButton"]:
+            context NextPageButton [ControlType="Button", AutomationId="NextPageButton"]:
+
+        context MoreRecommendedButton [ControlType="Button", AutomationId="ShowMoreSuggestionsButton"]:
+        context RecommendedList [ControlType="List", AutomationId="SuggestedItemsList"]:
+            context RecommendedItem($itemName) [ControlType="ListItem", Name=$itemName]:
+
+    context AllAppsPage {AutomationId="AllAppsHeading"}:
+        context BackButton [ControlType="Button", AutomationId="CloseAllAppsButton"]:
+        context AllAppsList [ControlType="List", AutomationId="AppsList"]:
+            context InstalledApp($appName) [ControlType="ListItem", Name=$appName]:
+
+    context RecommendedPage {AutomationId="MoreSuggestionsListHeaderText"}:
+        context BackButton [ControlType="Button", AutomationId="HideMoreSuggestionsButton"]:
+        context AllRecommendedList [ControlType="List", AutomationId="SuggestedItemsList"]:
+            context RecommendedItem($itemName) [ControlType="ListItem", Name=$itemName]:
+            context RecommendedItemContextMenu [ControlType="Window", Name="PopupHost"]:
