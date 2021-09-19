@@ -1,0 +1,29 @@
+
+context NotificationCenter [ControlType="Window", Name="Notification Center"]:
+    context ClearAllButton [ControlType="Button", AutomationId="ClearAllButton"]:
+    context FocusAssistSettingsButton [ControlType="Button", AutomationId="FocusAssistTextButton"]:
+
+    context NotificationGroup($appName) [ControlType="Group", ClassName="ListViewHeaderItem"] {AutomationId="Title", Name=$appName}:
+        context SettingsButton [ControlType="Button", AutomationId="SettingsButton"]:
+        context ClearButton [ControlType="Button", AutomationId="DismissButton"]:
+
+        context SettingsContextMenu [ControlType="Window", Name="PopupHost"]:
+            context TurnOffAllNotifications:
+            context GoToNotificationSettings:
+            context MakeAppHighPriority:
+
+        context Notification($notificationTitle) [ControlType="ListItem"] {AutomationId="Title", Name=$notificationTitle}:
+            context SettingsButton [ControlType="Button", AutomationId="SettingsButton"]:
+            context ClearButton [ControlType="Button", AutomationId="DismissButton"]:
+
+    
+    context ExpandCollapseCalendarButton[ControlType="Button", AutomationId="ExpandCollapseButton"]:
+
+    context Calendar [ControlType="Calendar", AutomationId="CalendarControl"]:
+        context HeaderButton [ControlType="Button", AutomationId="HeaderButton"]:
+        context PreviousButton [ControlType="Button", AutomationId="PreviousButton"]:
+        context NextButton [ControlType="Button", AutomationId="NextButton"]:
+
+        context Year($year) [ControlType="Button", Name=$year]:
+        context Month($month) [ControlType="Button", Name=$month]:
+        context Day($day) [ControlType="DataItem", Name=$day]:
