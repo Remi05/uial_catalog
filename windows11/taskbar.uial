@@ -1,0 +1,20 @@
+
+context Taskbar [ControlType="Pane", ClassName="Shell_TrayWnd"]:
+    context StartButton [ControlType="Button", Name="Start", AutomationId="StartButton", ClassName="ToggleButton"]:
+    context SearchButton [ControlType="Button", Name="Search", AutomationId="SearchButton", ClassName="ToggleButton"]:
+    context TaskViewButton [ControlType="Button", Name="Task View", AutomationId="TaskViewButton", ClassName="ToggleButton"]:
+    context WidgetsButton [ControlType="Button", Name="Widgets", AutomationId="WidgetsButton", ClassName="ToggleButton"]:           
+    context ChatButton [ControlType="Button", Name="Chat", AutomationId="MeetNowButton", ClassName="ToggleButton"]:   
+    context InternetConnectionButton [ControlType="Button", AutomationId="SystemTrayIcon", ClassName="SystemTray.OmniButtonLeft"]:
+    context VolumeButton [ControlType="Button", AutomationId="SystemTrayIcon", ClassName="SystemTray.OmniButtonCenter"]:
+    context PowerButton [ControlType="Button", AutomationId="SystemTrayIcon", ClassName="SystemTray.OmniButtonRight"]:
+    context ClockButton [ControlType="Button", AutomationId="SystemTrayIcon", ClassName="SystemTray.OmniButton"]:
+    context ShowDesktopButton [ControlType="Button"]:
+
+    context RunningApps [ControlType="Pane", Name="Running applications", ClassName="MSTaskSwWClass"]:
+        context PinnedApp($appName) [ControlType="Button", ClassName="Taskbar.TaskListButtonAutomationPeer", Name=$appName]:
+        context RunningApp($appName) [ControlType="Button", ClassName="Taskbar.TaskListButtonAutomationPeer", Name=$appName]
+
+    context SystemTray [ControlType="Pane", ClassName="TrayNotifyWnd"]:
+        context NotificationChevron [ControlType="Button", Name="Notification Chevron"]:
+    
