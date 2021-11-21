@@ -1,0 +1,5 @@
+
+context RunDialog [ControlType="Window", Name="Run"]:
+    context OkButton [ControlType="Button", Name="OK"]:
+    context CancelButton [ControlType="Button", Name="Cancel"]:
+    context BrowseButton [ControlType="Button", Name="Browse..."]:
