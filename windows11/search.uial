@@ -1,5 +1,5 @@
 
-context Search:
+context Search [ControlType="Window", Name="Search", ClassName="Windows.UI.Core.CoreWindow"]:
     context SearchBar [ControlType="Edit", AutomationId="SearchTextBox"]:
 
     context GiveFeedbackButton [ControlType="Button", AutomationId="feedbackButton"]:
