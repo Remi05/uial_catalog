@@ -1,0 +1,2 @@
+
+context TaskManager [ControlType="Window", Name="Task Manager", ClassName="TaskManagerWindow"]:
