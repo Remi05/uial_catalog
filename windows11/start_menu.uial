@@ -8,7 +8,7 @@ context StartMenu [ControlType="Window", AutomationId="LauncherFrameXAMLWindow"]
     context PowerOptions [ControlType="Window", Name="PopupHost"]:
     context UserOptions [ControlType="Window", Name="PopupHost"]:
 
-    conyext DocumentsButton [ControlType="ListItem", AutomationId="Microsoft.Windows.Documents"]:
+    context DocumentsButton [ControlType="ListItem", AutomationId="Microsoft.Windows.Documents"]:
     context DownloadsButton [ControlType="ListItem", AutomationId="Microsoft.Windows.Downloads"]:
     context FileExplorerButton [ControlType="ListItem", AutomationId="Microsoft.Windows.Explorer"]:
     context MusicButton [ControlType="ListItem", AutomationId="Microsoft.Windows.Music"]:
