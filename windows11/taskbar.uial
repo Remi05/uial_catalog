@@ -12,8 +12,8 @@ context Taskbar [ControlType="Pane", ClassName="Shell_TrayWnd"]:
     context ShowDesktopButton [ControlType="Button"]:
 
     context RunningApps [ControlType="Pane", Name="Running applications", ClassName="MSTaskSwWClass"]:
-        context PinnedApp($appName) [ControlType="Button", ClassName="Taskbar.TaskListButtonAutomationPeer", Name=$appName]:
-        context RunningApp($appName) [ControlType="Button", ClassName="Taskbar.TaskListButtonAutomationPeer", Name=$appName]
+    context PinnedApp($appName) [ControlType="Button", ClassName="Taskbar.TaskListButtonAutomationPeer", Name=$appName]:
+    context RunningApp($appName) [ControlType="Button", ClassName="Taskbar.TaskListButtonAutomationPeer", Name=$appName]:
 
     context SystemTray [ControlType="Pane", ClassName="TrayNotifyWnd"]:
         context NotificationChevron [ControlType="Button", Name="Notification Chevron"]:
