@@ -1,0 +1,4 @@
+
+context Desktop [ControlType="List", Name="FolderView", ClassName="SysListView32"]:
+    context RecycleBin [ControlType="ListItem", Name="Recycle Bin"]:
+    context Shortcut($name) [ControlType="ListItem", Name=$name]:

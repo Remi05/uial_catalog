@@ -1,0 +1,6 @@
+
+context SwitchItem($windowName):
+    context Icon:
+    context Title:
+    context CloseButton:
+    context Thumbnail:

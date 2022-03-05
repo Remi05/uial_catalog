@@ -1,0 +1,8 @@
+
+context VirtualDesktopFlyout:
+    context NewDesktopButton:
+
+    context VirtualDesktop($virtualDesktopName):
+        context NameTextBox [ControlType="TextBox"]:
+        context CloseButton [ControlType="Button"]:
+        context Thumbnail:

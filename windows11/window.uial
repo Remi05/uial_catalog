@@ -1,0 +1,27 @@
+
+context Window
+{
+    @definition: UIElement[ControlType="Window"]
+
+    context MinimizeButton : Button[Name="Minimize"]
+    {
+
+    }
+
+    context MinimizeButton is Button[Name="Minimize"]
+    context MaximizeButton : Button[Name="Minimize"]
+    context RestoreButton : Button[Name="Minimize"]
+    
+    state Maximized : <@windowState="Maximized">
+    {
+        context RestoreButton : Button[Name="Restore"]
+    }
+
+    state Restored <WindowState="Restored">:
+        context MaximizeButton is Button[Name="Maximize"]
+
+    state Snapped <WindowState="Arranged">:
+        context MaximizeButton is Button[Name="Maximize"]
+}
+
+    

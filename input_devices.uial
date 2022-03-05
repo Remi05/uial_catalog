@@ -1,0 +1,56 @@
+
+context Keyboard:
+    context Key [Value=$keyValue]:
+        interaction Down:
+        interaction Up:
+        interaction Press:
+
+
+context Mouse:
+    interaction Move($offset):
+    interaction MoveTo($position):
+
+    context Button [Type=$buttonType]:
+        interaction Down:
+        interaction Up:
+        interaction Click:
+        interaction DoubleClick:
+
+    context Wheel:
+        interaction Scroll($scrollAmount):
+
+
+context Touchpad:
+    interaction Move($offset):
+    interaction MoveTo($position):
+    interaction Tap:
+    interaction Touch:
+    interaction Release:
+    interaction Swipe:
+
+    context Button [Type=$buttonType]:
+        interaction Down:
+        interaction Up:
+        interaction Click:
+        interaction DoubleClick:
+
+    context OnePoint:
+    context TwoPoint:
+    context ThreePoint:
+ 
+
+context TouchScreen:
+    interaction Tap($point):
+    interaction DoubleTap($point):
+    interaction Touch($point):
+    interaction Release:
+    interaction LongPress($duration):
+    interaction Pinch($point):
+    interaction Swipe($startPoint, $endPoint):
+
+
+context HardwareButton[Type=$buttonType]: // $buttonType { Power, VolumeUp, VoluemDown }  
+    interaction Down:
+    interaction Up:
+    interaction Press:
+    interaction HoldFor($duration):

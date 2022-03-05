@@ -1,0 +1,13 @@
+
+context Widgets [ControlType="Group", AutomationId="root-container"]:
+    context Clock:
+    context SearchBar:
+    context SettingsButton [ControlType="Button"]:
+    context AddWidgetsButton [ControlType="Button"]:
+
+    context WidgetsSection;
+    context NewsSection:
+
+    context SettingsPage:
+        context CloseButton [ControlType="Button"]:
+    

@@ -1,0 +1,14 @@
+import 'switchitem.uial'
+
+context TaskView:
+    context Backdrop:
+
+    context RunningApplications:
+
+    context VirtualDesktop($virtualDesktopName):
+        context NameTextBox [ControlType="TextBox"]:
+        context CloseButton [ControlType="Button"]:
+        context Thumbnail:
+
+    context NewDesktopButton [ControlType="Button"]:
+

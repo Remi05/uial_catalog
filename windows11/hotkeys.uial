@@ -1,0 +1,116 @@
+
+context HotKeys:
+
+    interaction OpenWindow($windowName)
+    {
+        @description = "Opens a Window"
+        @measureId = "7575840"
+        
+        @maxDuration = 500ms        
+
+        @actions = [
+            HotKeys::OpenStart()
+            StartMenu::LaunchApp($windowName)
+            Mouse::Drag([10, 0], [100, 50]) 
+        ]
+    }
+    
+
+    interaction LaunchExplorer:
+        ::SendKeys("Win+E")
+
+    interaction LockComputer:
+        ::SendKeys("Win+L")
+
+    interaction MinimizeAllWindows:
+        ::SendKeys("Win+M")
+
+    interaction OpenAccessibilitySettings:
+        ::SendKeys("Win+U")
+
+    interaction OpenCastPane:
+        ::SendKeys("Win+K")
+
+    interaction OpenClipboard:
+        ::SendKeys("Win+V")
+
+    interaction OpenEmojiPanel:
+        ::SendKeys("Win+.")
+
+    interaction OpenEmojiPanel2:
+        ::SendKeys("Win+;")
+
+    interaction OpenFeedbackHub:
+        ::SendKeys("Win+F")
+
+    interaction OpenProjectPane:
+        ::SendKeys("Win+P")
+
+    interaction OpenRunDialog:
+        ::SendKeys("Win+R")
+
+    interaction OpenSearch:
+        ::SendKeys("Win+S")
+
+    interaction OpenSearch2:
+        ::SendKeys("Win+Q")
+
+    interaction OpenSettings:
+        ::SendKeys("Win+I")
+
+    interaction OpenVoiceTyping:
+        ::SendKeys("Win+H")
+
+    interaction OpenWinXMenu:
+        ::SendKeys("Win+X")
+
+    interaction ToggleChat:
+        ::SendKeys("Win+C")
+
+    interaction ToggleDesktop:
+        ::SendKeys("Win+D")
+
+    interaction ToggleGameBar:
+        ::SendKeys("Win+G")
+
+    interaction ToggleQuickSettings:
+        ::SendKeys("Win+A")
+
+    interaction ToggleNotificationCenter:
+        ::SendKeys("Win+N")
+
+    interaction ToggleStart:
+        ::SendKeys("Win")
+
+    interaction ToggleTaskView:
+        ::SendKeys("Win+Tab")
+
+    interaction ToggleWigets:
+        ::SendKeys("Win+W")
+
+
+context Window::HotKeys
+    interaction OpenSnapFlyout:
+        ::SendKeys("Win+Z")
+
+    interaction SnapLeft:
+        ::SendKeys("Win+Left")
+
+    interaction SnapRight:
+        ::SendKeys("Wind+Right")
+
+    state IsMaximized <WindowState="Maximized">:
+        interaction Maximize:
+            ::SendKeys("Win+Up")
+
+        interaction Restore:
+            ::SendKeys("Win+Down")
+
+    state IsRestored <WindowState="Restored">:
+        interaction Maximize:
+            ::SendKeys("Win+Up")
+        
+        interaction Minimize:
+            ::SendKeys("Win+Down")
+
+    
